@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+  top: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, #5f5f5f, #282828);
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  background: #fff;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 10px 35px 20px rgba(0, 0, 0, 0.15);
+  height: 450px;
+}
+
+.imgBx {
+  position: absolute;
+  left: 50%;
+  top: -35%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover .imgBx {
+  left: 50%;
+  top: -15%;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s;
+  transform: translateY(150px);
+}
+
+.card:hover .content .details {
+  transform: translateY(0px);
+}
+
+.card .content .details h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.card .content .details .data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.card .content .details .data h3 span {
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.card .content .details .actionBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .content .details .actionBtn a {
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  background: #282828;
+  cursor: pointer;
+}
+
+.card .content .details .actionBtn a:last-child {
+  border: 1px solid #999;
+  color: #999;
+  background-color: #fff;
+}
